@@ -10,7 +10,7 @@ var authinticate = (req, res, next) => {
     req.user = user;
     req.token = token;
     next();
-  }).catch((e) => res.send(401).send());
+  }).catch((e) => res.status(401).send());
 };
 
 module.exports = {authinticate}
